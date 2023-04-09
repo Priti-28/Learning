@@ -18,9 +18,9 @@ const NavBar = () => {
                     </Link>
                     <div className="navbar-btn flex">
                         {logged?<>
-                            <Link to="/add-course" className="cart-btn">
+                            {/* <Link to="/add-course" className="cart-btn">
                                 <MdAddCircleOutline/>
-                            </Link>
+                            </Link> */}
                             <Link to="/my-profile" className="cart-btn">
                                 <MdPerson/>
                             </Link>

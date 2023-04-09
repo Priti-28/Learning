@@ -1,6 +1,6 @@
 
 import ReactDOM from 'react-dom'
-import App from './App';
+import App from './userApp';
 import { CategoriesProvider } from './context/categories_context';
 import { CoursesProvider } from './context/courses_context';
 import { UsersProvider } from './context/users_context';

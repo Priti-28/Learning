@@ -23,10 +23,10 @@
     "styled-components": "^5.3.6",
     "web-vitals": "^1.1.2"
   },
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://127.0.0.1:5000/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+      "start": "react-scripts --openssl-legacy-provider start",
+      "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

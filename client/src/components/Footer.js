@@ -1,72 +1,72 @@
 import React from "react";
 import styled from 'styled-components';
-import {BsLinkedin, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
-import {Link} from "react-router-dom";
+import { BsLinkedin, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import { useCategories } from "../context/categories_context";
 import { useAuth, logout } from '../auth'
 
 const Footer = () => {
-    const categories=useCategories();
-    const [logged] = useAuth();
+  const categories = useCategories();
+  const [logged] = useAuth();
   return (
     <FooterWrapper>
-    <footer className="site-footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p className="text-justify about">Kursiki is an initiative to help the upcoming programmers start their career path. 
-            We focuse on providing the most understandable guides and tutorials. We will help programmers build 
-            up concepts in different programming languages that include Python, JavaScript, C#, CSS, HTML, PHP, Java, 
-            SQL and so more in the future.</p>
-          </div>
+      <footer className="site-footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p className="text-justify about">e-learning platform for students includes Embedded learning makes 
+              resources extremely easy to access since users do not need to stop and try to locate the resources on their own.</p>
+            </div>
 
-          <div className="col-xs-6 col-md-3">
-            <h6>Categories</h6>
-            <ul className="footer-links">
+            <div className="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul className="footer-links">
                 {categories?.map((category, idx) => (
-                    <li key={idx}><Link to = {`/category/${category.id}`}>{category.name}</Link></li>
+                  <li key={idx}><Link to={`/category/${category.id}`}>{category.name}</Link></li>
                 ))
                 }
-            </ul>
-          </div>
+              </ul>
+            </div>
 
-          <div className="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul className="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              {logged?<>
-                <li><Link to = '/my-profile'>My profile</Link></li>
-                <li><Link to = '/add-course'>Add course</Link></li>
-                <li><Link to = '/' onClick={()=>{logout()}}>Logout</Link></li>
-              </>:<>
-                <li><Link to = '/login'>Login</Link></li>
-                <li><Link to = '/signup'>Sign up</Link></li>
-              </>}
-            </ul>
+            <div className="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul className="footer-links">
+                {/* <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li> */}
+                {logged ? <>
+                  <li><Link to='/my-profile'>My profile</Link></li>
+                  {/* <li><Link to = '/add-course'>Add course</Link></li> */}
+                  <li><Link to='/' onClick={() => { logout() }}>Logout</Link></li>
+                </> : <>
+                  <li><Link to='/login'>Login</Link></li>
+                  <li><Link to='/signup'>Sign up</Link></li>
+                </>}
+              </ul>
+            </div>
           </div>
+          <hr></hr>
         </div>
-        <hr></hr>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-8 col-sm-6 col-xs-12">
-            <p className="copyright-text">Copyright &copy; 2022 All Rights Reserved by<a href="#"> Kursiki</a>.</p>
-          </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-sm-6 col-xs-12">
+              <p className="copyright-text"><a href="#"> e-learning </a></p>
+            </div>
 
-          <div className="col-md-4 col-sm-6 col-xs-12">
-            <ul className="social-icons">
-              <li><a className="facebook" href="#"><BsFacebook/></a></li>
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <ul className="social-icons">
+                {/* <li><a className="facebook" href="#"><BsFacebook/></a></li>
               <li><a className="twitter" href="#"><BsTwitter/></a></li>
-              <li><a className="youtube" href="#"><BsYoutube/></a></li>
-              <li><a className="linkedin" href="#"><BsLinkedin/></a></li>   
-            </ul>
+              <li><a className="youtube" href="#"><BsYoutube/></a></li> */}
+                <li><a className="linkedin" href="https://www.linkedin.com/in/priti-kumari-18151b201/"><BsLinkedin />Priti</a></li>
+                <li><a className="linkedin" href="https://www.linkedin.com/in/naman-singh-nayal-8364b5202/"><BsLinkedin />Naman</a></li>
+                <li><a className="linkedin" href="https://www.linkedin.com/in/panchadi-chandana-sai-b6329a235/"><BsLinkedin />Chandana</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-</footer>
-</FooterWrapper>
+      </footer>
+    </FooterWrapper>
   );
 };
 const FooterWrapper = styled.div`
@@ -120,7 +120,7 @@ const FooterWrapper = styled.div`
 }
 .footer-links a
 {
-  color:#737373
+  color:#737373;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -141,7 +141,7 @@ const FooterWrapper = styled.div`
   height:40px;
   line-height:40px;
   margin-left:6px;
-  margin-right:0;
+  margin-right:15px;
   border-radius:100%;
   background-color:#33353d
 }

@@ -2,20 +2,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import React from 'react'
 
-import NavBar from './components/Navbar';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import HomePage from './pages/HomePage';
-import SignUpPage from './pages/SignUpPage';
-import LoginPage from './pages/LoginPage';
-import AddCoursePage from './pages/AddCoursePage';
-import SingleCoursePage from './pages/SingleCoursePage';
-import MyProfilePage from './pages/MyProfilePage';
-import UserPage from './pages/UserPage';
-import AdminPage from './pages/AdminPage';
-import EnrolledCoursePage from './pages/EnrolledCoursePage';
-import CoursesPage from './pages/CoursesPage';
+import NavBar from './components/UserNavbar';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import HomePage from './userpages/HomePage';
+import SignUpPage from './userpages/SignUpPage';
+import LoginPage from './userpages/LoginPage';
+import AddCoursePage from './userpages/AddCoursePage';
+import SingleCoursePage from './userpages/SingleCoursePage';
+import MyProfilePage from './userpages/MyProfilePage';
+import UserPage from './userpages/UserPage';
+import AdminPage from './userpages/AdminPage';
+import EnrolledCoursePage from './userpages/EnrolledCoursePage';
+import CoursesPage from './userpages/CoursesPage';
 import Footer from './components/Footer';
-import EditCoursePage from './pages/EditCoursePage';
+import EditCoursePage from './userpages/EditCoursePage';
 
 const App = () => {
     return (
